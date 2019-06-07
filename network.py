@@ -60,9 +60,9 @@ def network():
     model.add(Activation('relu'))
     model.add(Dropout(0.25))
     
-    model.add(Dense(num_classes, activation='sigmoid'))
+    model.add(Dense(num_classes, activation='softmax'))
     
-    model.compile(optimizer='adam', loss='binary_crossentropy', 
+    model.compile(optimizer='adam', loss='categorical_crossentropy', 
                   metrics=[categorical_accuracy])
     return model
     
