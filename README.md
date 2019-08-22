@@ -1,7 +1,7 @@
 # Emotion-Recognition
-This repository builds a neural network to detect the emotions such as anger, disgust, fear, happiness, sadness, surprise, neutral and comfort from facial expressions. 
+This repository builds a neural network to detect emotions such as anger, disgust, fear, happiness, sadness, surprise, neutral and comfort from facial expressions. 
 
-Initial part of the training was done with a deep CNN on the University of Denver's AffectNet database (420K labeled facial expressions). To fine tune the network, 600 marathon runner facial expresisons were labeled manually by looking at five years of Chicago and London Marathon runner pictures from 2014 to 2018. Furthermore, certain demographics such as age, gender, pace etc. was scraped from Chicago and London Marathons to be used for predictions together with the images.
+The initial part of the training was done with a deep CNN on the University of Denver's AffectNet database (420K labeled facial expressions). To fine tune the network, 600 marathon runner facial expressisons were labeled manually by looking at five years of Chicago and London Marathon runner pictures from 2014 to 2018. Furthermore, certain demographics such as age, gender, pace etc. were scraped from Chicago and London Marathons to be used for predictions together with the images.
 
 The CNN was trained with 420K labeled facial expressions and weights were saved. Then, a parallel multilayer perceptron was trained with the demographics information and merged with the CNN to take into account both the facial expressions and the correlations coming from the demographics in predictions. This bilinear network was trained with the actual marathon images and demographics while keeping the majority of the CNN's weights frozen. In other words, I fine tuned the CNN while training the artificial neural network.
 
